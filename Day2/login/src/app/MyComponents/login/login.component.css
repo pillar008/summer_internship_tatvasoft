@@ -1,0 +1,113 @@
+/* Apply a global box-sizing rule */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Full viewport height */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+/* Container for login form */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  backdrop-filter: blur(15px);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Wrapper for the form */
+.login-wrapper {
+  width: 100%;
+}
+
+/* Header style */
+h2 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+/* Style for input groups */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 0.9em;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1em;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+.input-group input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #fff;
+  outline: none;
+}
+
+/* Button style */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background: #a777e3;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #6e8efb;
+}
+
+/* Placeholder style */
+::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Add a subtle fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
